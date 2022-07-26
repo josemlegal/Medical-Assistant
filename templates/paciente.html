@@ -104,6 +104,14 @@
                       <span class="block text-white">¿A que información</span>
                       <span class="block text-indigo-200">te gustaría acceder?</span>
                     </h1>
+                    <form action="{{ url_for('cargado') }}" method="POST">
+                      <div class="mt-4">
+                          <div>
+                              <label class="block" for="nombre">Ingresar Numero de CI<label>
+                              <input type="text" name="cedula">
+                          </div>
+                      <button type="submit">Buscar</button>
+                  </form>
                     <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                       <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                         <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"> Historial</a>

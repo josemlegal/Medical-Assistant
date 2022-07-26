@@ -41,7 +41,22 @@ def quienes():
 
     return render_template('quienes_somos.html')
 
-#desdeAca
+# Para ingresar CI y ver datos
+
+@app.route('/cargado', methods=['POST', 'GET'])
+def cargado():
+    if request.method == 'POST':
+        cedula = request.form["cedula"]
+        user = Task.query.filter_by(cedula=cedula).first()
+        return render_template('usuario.html', user=user)
+    return render_template('formulario_cargado.html')
+
+@app.route('/buscar')
+def buscar():
+    cedula = request.form['cedula']
+    return render_template('formulario.html')
+
+#Base de datos
 
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
