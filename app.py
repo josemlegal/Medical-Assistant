@@ -33,7 +33,7 @@ def formulario():
 
 @app.route('/paciente')
 def paciente():
-
+    print('si')
     return render_template('paciente.html')
 
 @app.route('/quien')
