@@ -25,31 +25,68 @@
         <!--- Padre ---> 
         <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
             <h3 class="text-2xl font-bold text-center">Datos del paciente</h3>
-            <form action="">
+            <form action="/create-task" method="POST">
                 <div class="mt-4">
                     <div>
-                        <label class="block" for="Name">Nombre Completo<label>
-                                <input type="text" placeholder="Nombre Completo"
+                        <label class="block" for="nombre">Nombre<label>
+                                <input type="text" name="nombre" placeholder="Nombre Completo"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label class="block" for="apellido">Apellido<label>
+                                <input type="text" name="apellido" placeholder="Nombre Completo"
                                     class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                     </div>
                     <div>
                         <label class="block" for="Cedula">Cédula<label>
-                                <input type="text" placeholder="Cedula"
+                                <input type="text" name="cedula" placeholder="Cedula"
                                     class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                     </div>
                     <div class="mt-4">
                         <label class="block" for="ciudad">Ciudad<label>
-                                <input type="text" placeholder="Ciudad"
+                                <input type="text" name="ciudad" placeholder="Ciudad"
                                     class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                     </div>
                     <div class="mt-4">
-                        <label class="block" for="email">Correo<label>
-                                <input type="text" placeholder="Correo"
+                        <label class="block" for="correo">Correo<label>
+                                <input type="text" name="correo" placeholder="Correo"
                                     class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                     </div>
-                 
+                    <div class="mt-4">
+                        <label class="block" for="fecha">Fecha<label>
+                                <input type="text" name="fecha" placeholder="Correo"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <!--<h3 class="text-2xl font-bold text-center mt-2" >Datos Medicos</h3>-->
+                    <div class="mt-4">
+                        <label class="block" for="motivo_de_consulta">Motivo de consulta<label>
+                                <input type="text" name="motivo_de_consulta" placeholder="motivo de consulta"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <div class="mt-4">
+                        <label class="block" for="diagnostico">Diagnostico<label>
+                                <input type="text" name="diagnostico" placeholder="motivo de consulta"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <div class="mt-4">
+                        <label class="block" for="indicaciones">Indicaciones<label>
+                                <input type="text" name="indicaciones" placeholder="Indicaciones"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <div class="mt-4">
+                        <label class="block" for="receta_1">Receta 1<label>
+                                <input type="text" name="receta_1" placeholder="Receta 1"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
+                    <div class="mt-4">
+                        <label class="block" for="receta_2">Receta 2<label>
+                                <input type="text" name="receta_2" placeholder="Receta 2"
+                                    class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                    </div>
                 </div>
-                
+                <div class="flex">
+                    <button type="submit" class="w-full px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Guardar</button>
+                </div>
             </form>
         </div>
 
@@ -57,12 +94,8 @@
     </div>
     <!--- abuelo/ ---> 
 
-    <!--- abuelo2 ---> 
-
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
-
-        <!--- Padre2 --->
-        
+        <!--
         <div class="px-8 py-6 mx-4 mt-0 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
                     <h3 class="text-2xl font-bold text-center mt-2" >Datos Medicos</h3>
                     <div class="mt-4">
@@ -106,10 +139,10 @@
                 
             </form>
         </div>
-         <!--- Padre2/ --->
 
-        
+
+        -->
     </div>
-    <!--- abuelo2/ ---> 
+    
 </body>
 </html>
