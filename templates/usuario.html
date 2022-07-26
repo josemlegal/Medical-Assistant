@@ -1,28 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Consulta Médica</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://cdn.tailwindcss.com"></script>
     <title>Probando</title>
   </head>
   <body>
-    <button type="button" onclick="imprimir_pdf()"> Imprimir Receta </button>
-    <script> 
-    function imprimir_pdf() { 
-    window.print()
-    }
+    <!-- Funcion Imprimir PDF -->
 
-    </script>
-    <h1>{{ user.nombre }}</h1>
-    <h1>{{ user.apellido }}</h1>
-    <h1>{{ user.ciudad }}</h1>
-    <h1>{{ user.correo }}</h1>
-    <h1>{{ user.fecha }}</h1>
-    <h1>{{ user.motivo_de_consulta }}</h1>
-    <h1>{{ user.diagnostico }}</h1>
-    <h1>{{ user.indicaciones }}</h1>
-    <h1>{{ user.receta_1 }}</h1>
-    <h1>{{ user.receta_2 }}</h1>
+    <style type="text/css">
+      @media print {
+          #printbtn {
+              display :  none;              
+          }
+          .print-section{
+            width: 800px;
+          }
+      }
+      </style>
+      <input class="hover:bg-blue-900 justify-between items-center mt-4 ml-5 px-2 py-1 border border-transparent ring-offset-1 ring-1 text-base font-medium rounded-md shadow-sm bg-white hover:bg-indigo-50 sm:px-8" aria-hidden="true" id ="printbtn" type="button" value="Imprimir Consulta" onclick="window.print();" > <br>
+  
+  <div class="mt-2">
+
+      <!-- Imprime el logo -->
+
+    <div class="relative bg-white">
+
+      <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          <a href="#">
+            <span class="sr-only">Workflow</span>
+            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+    <div class="flex items-center justify-center min-h-fit bg-gray-100">
+
+      <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-2/3 lg:w-2/3 sm:w-2/3 print-section">
+
+        <h3 class="text-2xl font-bold text-center">Información</h3>
+
+        <form action="/create-task" method="POST">
+
+          <div class="mt-4">
+
+            <div>
+              <label class="block font-bold" for="nombre">Nombre</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.nombre }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Apellido</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.apellido }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Ciudad de Origen</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.ciudad }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Correo</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.correo }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Fecha</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.fecha }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Motivo de Consulta</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.motivo_de_consulta }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Diagnóstico</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.diagnostico }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Indicaciones Generales</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.indicaciones }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Receta 1</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.receta_1 }}</h1> 
+            </div>
+
+            <div>
+              <label class="block font-bold" for="nombre">Receta 2</label>
+                <h1 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">{{ user.receta_2 }}</h1> 
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+  </div>
   </body>
 </html>
