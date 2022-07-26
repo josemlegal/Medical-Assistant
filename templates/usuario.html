@@ -7,6 +7,13 @@
     <title>Probando</title>
   </head>
   <body>
+    <button type="button" onclick="imprimir_pdf()"> Imprimir Receta </button>
+    <script> 
+    function imprimir_pdf() { 
+    window.print()
+    }
+
+    </script>
     <h1>{{ user.nombre }}</h1>
     <h1>{{ user.apellido }}</h1>
     <h1>{{ user.ciudad }}</h1>
