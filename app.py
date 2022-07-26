@@ -78,6 +78,11 @@ def home():
     tasks = Task.query.all()
     return render_template('index.html', tasks = tasks)
 
+@app.route('/popup')
+def popup():
+    tasks = Task.query.all()
+    return render_template('popup.html', tasks = tasks)
+
 @app.route('/formulario')
 def form():
     tasks = Task.query.all()
