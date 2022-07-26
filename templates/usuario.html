@@ -120,22 +120,25 @@
                     <form action="{{ url_for('cargado') }}" method="POST">
                       <div class="mt-4">
                           <div>
+                            <h1>Paciente: {{ consultas[0].nombre }}</h1>
                               <label class="block" for="nombre">Ingresar Numero de CI<label>
                               <input type="text" name="cedula">
-                              <h1>{{ user.nombre }}</h1>
-                              <h1>{{ user.apellido }}</h1>
-                              <h1>{{ user.motivo_de_consulta }}</h1>
-                              <h1>{{ user.fecha }}</h1>
                               <button href="" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"> Ver detalles </button>
-                              <!--
-                              <h1>{{ user.ciudad }}</h1>
-                              <h1>{{ user.correo }}</h1>
-                              <h1>{{ user.diagnostico }}</h1>
-                              <h1>{{ user.indicaciones }}</h1>
-                              <h1>{{ user.receta_1 }}</h1>
-                              <h1>{{ user.receta_2 }}</h1>-->
+                              <div class="grid grid-cols-4 gap-8 text-center p-20 pt-0">
+                                {% for consulta in consultas %}
+                                  <div class="bg-white max-w-sm rounded overflow-hidden shadow-lg mx-auto">
+                                    <div class="px-6 py-4">
+                                      <a class="font-bold text-xl mb-2">{{ consulta.fecha }}</a>
+                                      <p class="text-gray-700 text-base">
+                                        Motivo: {{ consulta.motivo_de_consulta }}
+                                      </p>
+                                    </div>
+                                  </div>
+                                {% endfor %}
+
+                              </div>
                           </div>
-                      <!--<button type="submit">Buscar</button>-->
+                      <!-- <button type="submit">Buscar</button> -->
                   </form>
                     <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                       <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
