@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info de Paciente</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+	  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+	  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+  </head>
 <body>
     <body>
         <div class="bg-white">
@@ -84,9 +93,23 @@
                             </div>
                             </div>
                       <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                        
                       <button class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"   type="submit">Buscar</button>
+
+                     
                     </div>
-                    </form>
+                    <!--Este es el boton de notificacion-->
+                    <div>
+                    <button disabled class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
+                      Activar notificaciones
+                    </button>
+                    </div>
+                    <!--Estos son los botones de notificacion-->
+                    <div>    
+                    </div>
+                  </div>
+                </form>
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8" onclick="push_message()">Probar notificaciones</button>
                   <!-- ingresar numero de cedula-->
                   </div>
                 </div>

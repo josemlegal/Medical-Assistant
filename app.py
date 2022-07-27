@@ -183,7 +183,7 @@ def subscription():
 
 @app.route("/push_v1/",methods=['POST'])
 def push_v1():
-    message = "Abrite kpe"
+    message = "Hola, Recuerda que debes tomar tu DILAPRES a las 19:00"
     print("is_json",request.is_json)
 
     if not request.json or not request.json.get('sub_token'):
