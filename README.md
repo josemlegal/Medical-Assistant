@@ -40,6 +40,7 @@ _SI quieres puedes habilitar antes el modo de desarrollo `Debug mode: ON`_
 
 ```
 export FLASK_ENV=development
+```
 
 ## Tecnologías usadas :
 
@@ -49,19 +50,20 @@ export FLASK_ENV=development
 - Python
 - JavaScript
 
-
 ## Integrantes
--Alberto  Nunez Gottschalk
--Mario  Ojeda
+
+-Alberto Nunez Gottschalk
+-Mario Ojeda
 -Alejandro Aguilar
 -Victor Gallardo
 -Maximiliano Caballero
 -Juan Bogado
 
- ## Coaches
- -Jose Martinez
- -Jose Gonzalez
+## Coaches
 
- ## Colaboradores
- - Manuel Castelnovo
-```
+-Jose Martinez
+-Jose Gonzalez
+
+## Colaboradores
+
+- Manuel Castelnovo
