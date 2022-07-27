@@ -124,7 +124,14 @@ def create():
     
     db.session.add(new_task)
     db.session.commit()
-    return redirect(url_for('home'))
+    return redirect(url_for('formulario'))
+
+
+@app.route('/detalle-consulta/<consulta_id>/')
+def detalle_consulta(consulta_id):
+    consulta = Task.query.filter_by(id=consulta_id).first()
+    return render_template('consulta_paciente.html', consulta=consulta)
+
 
 @app.route('/done/<id>')
 def done(id):
