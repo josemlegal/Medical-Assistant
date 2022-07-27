@@ -128,4 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+*.pem
+private_key.txt
+public_key.txt
